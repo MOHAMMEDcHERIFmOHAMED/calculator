@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    margin: 0;
+    font-family: 'SF Pro Display', Arial, sans-serif;
+}
+
+.calculator {
+    background-color: #1d1919;
+    border-radius: 30px;
+    width: 350px;
+    padding: 20px;
+    box-shadow: 0px 0px 50px rgba(127, 125, 125, 0.523);
+}
+
+.display {
+    overflow: hidden;
+    background-color: #000;
+    color: #fff;
+    text-align: right;
+    padding: 20px;
+    font-size: 2.5em;
+    height: 50px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 13px;
+}
+
+.button {
+    box-shadow: 0 0 5px rgba(162, 162, 162, 0.41);
+
+    border-radius: 50%;
+    padding: 20px;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+}
+.gr{
+    background-color: #d4d4d4;
+}
+
+.button.nbr {
+    background-color: #505050;
+}
+
+.button.operator {
+    background-color: #f88706;
+}
+
+.button.zero {
+    border-radius: 50px;
+}
+
+.button.operator:hover {
+    background-color: #fa931e;
+}
+
+.button:hover {
+    background-color: #6b6b6b;
+}
+
+.button:active {
+    background-color: #888;
+}
+
+.button.operator:active {
+    background-color: #ff9933;
+}
+
+.operator{
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 1.5em;
+}
+
+    </style>
+
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display"></div>
+        <div class="buttons">
+            <button class="button clear gr" onclick="clearShowBox()">C</button>
+            <button class="button gr" onclick="">/</button>
+            <button class="button gr" onclick="">*</button>
+            <button class="button operator delete" onclick="">DEL</button>
+            <button class="button nbr" onclick="">7</button>
+            <button class="button nbr" onclick="">8</button>
+            <button class="button nbr" onclick="">9</button>
+            <button class="button operator" onclick="">-</button>
+            <button class="button nbr" onclick="">4</button>
+            <button class="button nbr" onclick="">5</button>
+            <button class="button nbr" onclick="">6</button>
+            <button class="button operator" onclick="">+</button>
+            <button class="button nbr" onclick="">1</button>
+            <button class="button nbr" onclick="">2</button>
+            <button class="button nbr" onclick="">3</button>
+            <button class="button operator" onclick="">=</button>
+            <button class="button zero nbr" onclick="" style="grid-column: span 2;">0</button>
+            <button class="button  nbr" onclick="">.</button>
+            <button class="button operator ans" onclick="">ans</button>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
